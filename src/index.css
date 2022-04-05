@@ -20,3 +20,15 @@ body {
 ul.noteList {
     padding: 0;
 }
+
+/* error message  */
+
+.error {
+    color: red;
+    background: lightgrey;
+    font-size: 20px;
+    border-style: solid;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
