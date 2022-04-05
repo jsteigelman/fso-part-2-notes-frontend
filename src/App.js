@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import './App.css'
 import Note from './Components/Note'
-import axios from 'axios'
 import noteService from './services/notes'
 
 
@@ -69,13 +68,13 @@ const App = () => {
 
   return (
     <div>
-      <h1>Notes</h1>
+      <h1 className="appName">Notes</h1>
       <div>
         <button onClick={() => setShowAll(!showAll)}>
           show {showAll ? 'important' : 'all'}
         </button>
       </div>
-      <ul>{notesList}</ul>
+      <ul className="noteList">{notesList}</ul>
       <form onSubmit={addNote}>
         <input value={newNote} onChange={handleNoteChange} />
         <button type='submit'>save</button>

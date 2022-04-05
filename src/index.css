@@ -1,0 +1,22 @@
+body {
+    background-color: #F1F1FC;
+    color: #121C4A;
+    font-family: Arial, Helvetica, sans-serif;    
+}
+
+.appName {
+    color: #121C4A
+}
+
+.note {
+    color: #121C4A;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 500px;
+}
+
+ul.noteList {
+    padding: 0;
+}
