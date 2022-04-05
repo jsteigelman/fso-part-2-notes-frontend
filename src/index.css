@@ -1,7 +1,10 @@
 body {
     background-color: #F1F1FC;
     color: #121C4A;
-    font-family: Arial, Helvetica, sans-serif;    
+    font-family: Arial, Helvetica, sans-serif; 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;   
 }
 
 .appName {
@@ -9,12 +12,16 @@ body {
 }
 
 .note {
-    color: #121C4A;
-    padding: 10px 0;
+    background-color: #fff;
+    border-radius: 12px;
+    color: #000;
+    padding: 16px;
+    margin: 16px 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 500px;
+
 }
 
 ul.noteList {
