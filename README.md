@@ -1,4 +1,4 @@
-# Full Stack Open - Part 2 (Notes App)
+# Full Stack Open - Part 2 (Notes App Frontend)
 This project is currently in progress!
 
 ## About Full Stack Open
