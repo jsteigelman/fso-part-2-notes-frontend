@@ -1,13 +1,14 @@
 const Footer = () => {
     const footerStyle = {
-      color: 'green',
+      color: 'gray',
       fontStyle: 'italic',
-      fontSize: 16
+      fontSize: 16,
+      width: '500px'
     }
     return (
       <div style={footerStyle}>
         <br />
-        <em>Note app, Department of Computer Science, University of Helsinki 2022</em>
+        <em>Created by Joey Steigelman | Project provided by Full Stack Open, Department of Computer Science, University of Helsinki 2022</em>
       </div>
     )
   }

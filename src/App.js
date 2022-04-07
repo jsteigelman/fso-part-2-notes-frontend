@@ -4,18 +4,19 @@ import Note from './Components/Note'
 import noteService from './services/notes'
 import Notification from './Components/Notification'
 import Footer from './Components/Footer'
+import axios from 'axios'
 
 const App = () => {
   const [notes, setNotes] = useState([])
-  const [newNote, setNewNote] = useState('a new note...')
+  const [newNote, setNewNote] = useState('')
   const [showAll, setShowAll] = useState(true)
-  const [errorMessage, setErrorMessage] = useState('some error happened...')
+  const [errorMessage, setErrorMessage] = useState(null)
 
   useEffect(() => {
-    noteService
-      .getAll()
-      .then(initialNotes => {
-        setNotes(initialNotes)
+    axios
+      .get('http://localhost:3001/api/notes')
+      .then(res => {
+        setNotes(res.data)
       })
   }, [])
 
@@ -60,7 +61,7 @@ const App = () => {
     })
     .catch(error => {
       setErrorMessage(
-        `Note '${note.content}' was already removed from server`
+        `Error: The note '${note.content}' was already removed from server`
       )
       setTimeout(() => {
         setErrorMessage(null)
@@ -73,16 +74,16 @@ const App = () => {
 
   return (
     <div>
-      <h1 className="appName">Notes</h1>
+      <h1 className="appName">Notepad</h1>
       <Notification message={errorMessage} />
       <div>
-        <button onClick={() => setShowAll(!showAll)}>
+        <button id="showImportantButton" onClick={() => setShowAll(!showAll)}>
           show {showAll ? 'important' : 'all'}
         </button>
       </div>
       <ul className="noteList">{notesList}</ul>
-      <form onSubmit={addNote}>
-        <input value={newNote} onChange={handleNoteChange} />
+      <form className="inputNoteForm" onSubmit={addNote}>
+        <input placeholder="Enter some text..." value={newNote} onChange={handleNoteChange} />
         <button type='submit'>save</button>
       </form>
       <Footer />
