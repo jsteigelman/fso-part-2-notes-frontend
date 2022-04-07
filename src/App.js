@@ -78,13 +78,13 @@ const App = () => {
       <Notification message={errorMessage} />
       <div>
         <button id="showImportantButton" onClick={() => setShowAll(!showAll)}>
-          show {showAll ? 'important' : 'all'}
+          Show {showAll ? 'starred' : 'all'}
         </button>
       </div>
       <ul className="noteList">{notesList}</ul>
       <form className="inputNoteForm" onSubmit={addNote}>
         <input placeholder="Enter some text..." value={newNote} onChange={handleNoteChange} />
-        <button type='submit'>save</button>
+        <button type='submit'>Save</button>
       </form>
       <Footer />
     </div>
