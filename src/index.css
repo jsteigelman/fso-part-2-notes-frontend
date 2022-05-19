@@ -1,10 +1,16 @@
 
 :root {
     --body-width: 500px;
+    height: 100%;
 }
 body {
     /* background-color: #FFCD1E; */
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-image: linear-gradient(#DC74FC, #FD757B);
+    background-image: linear-gradient(#DC74FC, #1C91FF);
     color: #121C4A;
     font-family: Arial, Helvetica, sans-serif; 
     display: flex;

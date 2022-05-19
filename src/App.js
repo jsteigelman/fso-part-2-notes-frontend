@@ -88,7 +88,6 @@ const App = () => {
         <input placeholder="Enter some text..." value={newNote} onChange={handleNoteChange} />
         <button type='submit'>Save</button>
       </form>
-      <Footer />
     </div>
   )
 }
