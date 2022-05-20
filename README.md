@@ -14,6 +14,7 @@ The full project (backend and frontend) is saved in a seperate repository: [http
 * User can filter notes to show only the important notes (notes marked with stars)
  
 ## Built With
+* [axios](https://axios-http.com/docs/intro) - Axios is a promise-based HTTP Client for node.js and the browser
 * [React](https://reactjs.org/) - React is a JavaScript library for building user interfaces
 
 ## About Full Stack Open
